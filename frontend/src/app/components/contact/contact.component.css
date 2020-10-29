@@ -1,0 +1,91 @@
+body{
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+.head-text{
+    animation: slideInFromLeft 1s ease-in;
+}
+
+
+.jumbotron{
+    background-color: #047aed;
+    color: white;
+    height: fit-content;
+}
+
+label{
+    font-weight: bold;
+}
+
+.sp-btwn{
+    margin-right: 10px;
+}
+
+.card{
+    background-color: #fff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    width: 95%;
+}
+
+.footer{
+    margin-top: 30px;
+    height: 125px;
+    padding-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: #002240;
+}
+
+.fex-grow{
+    flex: 1;
+}
+
+.footer h2{
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}

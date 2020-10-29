@@ -1,0 +1,70 @@
+<body>
+    <section>
+        <div class="jumbotron">
+            <div class="container">
+              <h1 class="display-4 head-text"> <i class="far fa-comment-alt"></i> Contacto de Soporte </h1> 
+            </div>
+        </div>
+    </section>
+    
+    <section class="c-form">
+        <div class="container flex-grow">
+            <div class="card">
+                <div class="card-body">
+                      <form class="form-row was-validated" #contactForm="ngForm" (ngSubmit)="addContact(contactForm)">
+                        <div class="form-group col-md-6">
+                            <label for="name" class="control-label"> <i class="fas fa-user-alt px-1"></i> Nombre Completo </label>
+                            <input type="text" value='' class="form-control" name="name" [(ngModel)]="contactService.selectedContact.name" required>
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name" class="control-label"> <i class="fas fa-building px-1"></i> Nombre de la Empresa </label>
+                            <input type="text" value='' class="form-control" name="companyName" [(ngModel)]="contactService.selectedContact.companyName" required/>
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name" class="control-label"> <i class="fas fa-envelope px-1"></i> Correo Electrónico </label>
+                            <input type="text" value='' class="form-control" name="email" [(ngModel)]="contactService.selectedContact.email" required>
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="name" class="control-label"> <i class="fas fa-phone px-1"></i> Teléfono</label>
+                            <input type="text" value='' class="form-control" name="phone" [(ngModel)]="contactService.selectedContact.phone" required>
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="name" class="control-label"> <i class="fas fa-list-alt px-1"></i> Categoría</label>
+                            <select class="form-control" name="category" [(ngModel)]="contactService.selectedContact.category" required>
+                                <option value="Ventas"> Ventas </option>
+                                <option value="Servicios"> Servicios </option>
+                                <option value="Reclamos"> Reclamos </option>
+                            </select>
+                            <div class="valid-feedback">Correcto.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="name" class="control-label"> <i class="fas fa-comment px-1"></i> Mensaje</label>
+                            <textarea class="form-control rounded-1" name="msg" cols="30" rows="3" placeholder="Escriba su mensaje..." [(ngModel)]="contactService.selectedContact.msg" required></textarea>
+                            <div class="valid-feedback">Válido.</div>
+                            <div class="invalid-feedback">*Requerido.</div>
+                        </div>
+                        <button class="btn btn-success btn-lg"> ENVIAR </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container grid grid-3">
+            <div>
+                <h2> Prueba para Hispano Soluciones </h2>
+                <p> Copyright &copy; 2020 - Ing. José Pirela </p>
+            </div>
+        </div>
+    </footer>
+</body>
